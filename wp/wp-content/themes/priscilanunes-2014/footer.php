@@ -1,18 +1,23 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+		<section class="footer block_wpr">
+			<footer class="block_cntt" role="contentinfo">
+				<nav class="menu_footer" role="navigation">
+					<?php html5blank_nav(); ?>
+				</nav>											
+				<nav class="menu_social">
+					<a href="#" target="_blank" class="face"></a>
+					<a href="#" target="_blank" class="inst"></a>
+					<a href="#" target="_blank" class="twit"></a>
+				</nav>
 
 			</footer>
-			<!-- /footer -->
+		</section>
+		<section class="copyright block_wpr">
+			<div class="block_cntt">
+				<p class="copy">&copy; <?php echo date('Y'); ?> - Todos os direitos reservados - Priscilla Nunes</p>
+				<a href="#" target="_blank" class="gustavo_link">Gustavo Lins</a>
+			</div>
+		</section>
 
-		</div>
-		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
 

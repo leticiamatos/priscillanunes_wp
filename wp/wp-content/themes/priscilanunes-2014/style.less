@@ -128,6 +128,28 @@ body{
 }
 
 // General Classes
+.menu_social{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  a{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: @cK;
+    background-image: url(img/ico/social_menu.png);
+    margin-left: 3px;
+  }
+  a:hover{
+    background-color: @cY;
+    opacity: 1;
+  }
+  a.face{ background-position: left center;}
+  a.inst{ background-position: center center;}
+  a.twit{ background-position: right center;}
+}
+
 header{
   h1 a{
     display: block;
@@ -137,27 +159,6 @@ header{
     img{
       display: block;
     }
-  }
-  .menu_social{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    a{
-      display: block;
-      float: left;
-      width: 30px;
-      height: 30px;
-      background-color: @cK;
-      background-image: url(img/ico/social_menu.png);
-      margin-left: 3px;
-    }
-    a:hover{
-      background-color: @cY;
-      opacity: 1;
-    }
-    a.face{ background-position: left center;}
-    a.inst{ background-position: center center;}
-    a.twit{ background-position: right center;}
   }
   .menu{
     position: absolute;
@@ -197,6 +198,7 @@ header{
 .block_wpr.header{
   position: relative;
   height: 160px;
+  background-color: #fff;
   .header_bottom{
     background: url(img/header_gr.png);
     height: 5px;
@@ -264,14 +266,15 @@ header{
 
 // home
 body.home{
-  background: url(img/z_lixo/01_home.jpg) top center;
+  //background: url(img/z_lixo/01_home.jpg) top center;
 
   .block_main .block_cntt{
     padding-top: 35px;
   }
 }
 .block_main{
- // background: url(img/body_bg.gif);
+  background: url(img/body_bg.gif);
+  padding-bottom: 40px;
 }
 .post_list{
   .post{
@@ -289,7 +292,7 @@ body.home{
     }
     .cat{
       position: absolute;
-      bottom: 13px;
+      bottom: 7px;
       left: 5px;
       background: @cK;
       display: block;
@@ -423,5 +426,54 @@ aside.sidebar{
     li{
       width: 32% !important;
     }
+  }
+}
+
+// footer
+.footer{
+  background: @cK;
+  .block_cntt{
+    background: url(img/footer-bg.gif) right center no-repeat;
+    height: 125px;
+  }
+  .menu_footer{
+    padding-top: 50px;
+    li{
+      display: inline-block;
+      margin-right: 60px;
+      font-family: @fontTitle;
+      font-size: 19px;
+      text-transform: uppercase;
+      a{ color: #fff;}
+    }
+  }
+  .menu_social{
+    right: 240px;
+    top: 45px;
+    a{
+      background-color: #fff;
+      background-image: url(img/ico/social_footer.png);
+    }
+  }
+}
+.copyright{
+  margin-top: 20px;
+  height: 35px;
+  .copy{
+    color: @cGray;
+    font-size: 12px;  
+    a{
+      color:  @cGray;
+    }
+  }
+  .gustavo_link{
+    height: 30px;
+    width: 30px;
+    background: url(img/posfooter-logo.gif) center no-repeat;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    overflow: hidden;
+    text-indent: -300px;
   }
 }

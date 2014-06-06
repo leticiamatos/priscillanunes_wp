@@ -186,7 +186,7 @@ if (function_exists('register_sidebar'))
     ));
 
     // Define Sidebar Widget Area 2
-    register_sidebar(array(
+   /* register_sidebar(array(
         'name' => __('Widget Area 2', 'html5blank'),
         'description' => __('Description for this widget-area...', 'html5blank'),
         'id' => 'widget-area-2',
@@ -194,7 +194,7 @@ if (function_exists('register_sidebar'))
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
-    ));
+    ));*/
 }
 
 // Remove wp_head() injected Recent Comment styles
