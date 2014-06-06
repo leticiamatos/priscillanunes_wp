@@ -1,0 +1,427 @@
+/*
+Theme Name: Priscila Nunes Blog
+Author: Gustavo Lins
+Description: Version 2014
+*/
+
+  /* Colors */
+  @cK:      #000;
+  @cGray:   #747474;
+  @cGray2:  #EEEEEE;
+  @cY:      #D1A520;
+
+  @cTest:rgba(0,255,0,0.5);  
+  
+  /* Measures */
+  @width:960px;
+  .width_center{
+    width: @width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fonts */
+  @fontTitle: 'Electrolize', sans-serif;
+  @fontRegular: 'Ubuntu', sans-serif;
+
+/* =============================================================================
+   General
+========================================================================== */
+.radius3 (@radius: 3px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius4 (@radius: 4px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius6 (@radius: 5px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius5top (@radius: 5px 5px 0 0){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius5bottom (@radius: 0 0 5px 5px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.noRadius (@radius: none){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.transition (@transiton:0.6s){
+  transition:@transiton;
+  -moz-transition:@transiton;
+  -webkit-transition:@transiton;
+  -o-transition:@transiton;
+  -ms-transition:@transiton;
+}
+.noTransition (@transiton:none){
+  transition:@transiton;
+  -moz-transition:@transiton;
+  -webkit-transition:@transiton;
+  -o-transition:@transiton;
+  -ms-transition:@transiton;
+}
+.noOpacity{
+  opacity: 1 !important;
+}
+.shadow (@shadow: 3px 3px 2px rgba(0,0,0,0.3)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
+.clear{
+  display: block; 
+  clear: both;
+}
+a{ 
+  color: @cY;
+  .transition;
+}
+a:hover{
+  text-decoration: none; 
+  opacity: 0.6;
+}
+.block_wpr{
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+.block_cntt{
+  position: relative;
+  .width_center;
+}
+
+/* Responsive layout */
+@media screen and (min-width: 0) and (max-width: 599px){}
+@media screen and (min-width: 600) and (max-width: 999px){}
+@media screen and (min-width: 1000){}
+
+/* Content */
+body{
+  font-family: @fontRegular;
+  font-size: 15px;
+  background: #EEEEEE url(img/aluno/body_bg.jpg) top center repeat-x;
+}
+
+// General Classes
+header{
+  h1 a{
+    display: block;
+    background: @cK;
+    width: 300px;
+    height: 160px;
+    img{
+      display: block;
+    }
+  }
+  .menu_social{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    a{
+      display: block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      background-color: @cK;
+      background-image: url(img/ico/social_menu.png);
+      margin-left: 3px;
+    }
+    a:hover{
+      background-color: @cY;
+      opacity: 1;
+    }
+    a.face{ background-position: left center;}
+    a.inst{ background-position: center center;}
+    a.twit{ background-position: right center;}
+  }
+  .menu{
+    position: absolute;
+    right: 0;
+    top: 45px;
+    li{
+      display: block;
+      float: left;
+    }
+    a{
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size:24px;
+      letter-spacing: -1px;
+      display: block;
+      font-family: @fontTitle;
+      padding: 18px 0 14px;
+      width: 150px;
+      text-align: center;
+      border-top:5px solid #fff;
+      border-bottom:5px solid #fff;
+      margin-left: 20px;
+      color: @cGray;
+    }
+    li.current-menu-item a{
+      color: @cY;
+      border-top:5px solid @cY;
+      border-bottom:5px solid @cY;      
+    }
+    a:hover{
+      color: @cGray;
+      border-top:5px solid @cGray;
+      border-bottom:5px solid @cGray;      
+    }
+  }
+}
+.block_wpr.header{
+  position: relative;
+  height: 160px;
+  .header_bottom{
+    background: url(img/header_gr.png);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    z-index: 10;
+  }
+}
+.wrapper{
+  position: relative;
+  z-index: 9;
+}
+
+// Home
+.block_slideshow{
+
+  .slide{
+    .text{
+      color: #FFFFFF;
+      font-size: 18px;
+      position: absolute;
+      right: 20px;
+      text-align: right;
+      top: 260px;
+      width: 700px;
+      h2,p{
+        background: @cK;
+        display: inline-block;
+        padding: 10px 20px;
+      }
+      h2{
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+    .line{
+      margin-top: 2px;
+      height: 5px;
+      background: @cY;
+      display: block;
+      clear: both;
+    }
+  }
+
+  .slide_control_wpr{
+    height: 1px;
+    clear: both;
+  }    
+  .bx-prev,
+  .bx-next{
+    display: block;
+    height: 62px;
+    width: 62px;
+    background-image: url(img/ico/banner_arrows.png);
+    position: absolute;
+    top: 170px;
+    font-size: 3px;
+    overflow: hidden;
+    text-indent: -200px;
+  }
+  .bx-prev{ left: 20px; background-position: left center;}
+  .bx-next{ right: 20px; background-position: right center;}
+}
+
+// home
+body.home{
+  background: url(img/z_lixo/01_home.jpg) top center;
+
+  .block_main .block_cntt{
+    padding-top: 35px;
+  }
+}
+.block_main{
+ // background: url(img/body_bg.gif);
+}
+.post_list{
+  .post{
+    .col_01{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      display: block;
+      float: left;
+      img{
+        height: 300px;
+        display:block;
+      }
+    }
+    .cat{
+      position: absolute;
+      bottom: 13px;
+      left: 5px;
+      background: @cK;
+      display: block;
+      text-transform: lowercase;
+      padding: 10px 15px;
+      font-weight: 300; 
+    }
+    .col_02{
+      position: relative;
+      float: left;
+      width: 328px;
+      height: 300px;
+    }
+    h3{
+      padding: 40px 40px 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .text{
+      padding: 10px 40px 0;
+      color: @cY;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .link{
+      display: block;
+      height: 30px;
+      width: 30px;
+      background: @cGray2 url(img/ico/title_arrow.png) center no-repeat;
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+    }
+  }
+  .line{
+    height: 5px;
+    background: @cY;
+    display: block;
+    width: 100%;
+    margin-top: 2px;
+    float: left;
+  }
+  .line-col_01{
+    clear: both;
+    width: 300px;
+  }
+  .line-col_02{
+    background: @cGray2;
+    width: 330px;
+  }
+  .article_margin{
+    height: 20px;
+    clear: both;
+  }
+}
+
+div.content{
+  width: 630px;
+  float: left;
+  .title_line{
+    height: 5px;
+    display: block;
+    width: 135px;
+    background: @cY;
+  }
+  .page_title{
+    display: block;
+    height: 75px;
+    line-height: 73px;
+    color: @cY;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: @fontTitle;
+  }
+}
+
+// Sidebar
+aside.sidebar{
+  width: 300px;
+  float: left;
+  margin-left: 30px;
+  
+  .widget_search{
+    position: relative;
+    .search-input{
+      background: @cK;
+      padding: 4% 5%;
+      width: 90%;
+      border: none;
+      font-size: 19px;
+      font-family: @fontTitle;
+      font-weight: 300;
+      color: #fff;
+    }
+    .search-submit{
+      border: none;
+      background: url(img/ico/search-ico.png) center no-repeat;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      text-indent: -200px;
+      position: absolute;
+      right: 4px;
+      top: 3px;
+    }
+  }
+
+  h3{
+    display: none;
+  }
+  // Adv 01,02 e 03
+  #text-2,
+  #text-4,
+  #text-5{
+    margin-top: 30px;
+  }
+
+  // facebook
+  #text-3{
+    border: 5px solid @cK;
+    margin-top: 30px;
+  }
+
+  // instagram
+  .jr-insta-slider{
+    background: url(img/aside-ista-title.gif) top center no-repeat;
+    margin-top: 30px;
+    border: 5px solid @cK;
+    padding: 77px 15px 20px;
+
+    li{
+      width: 32% !important;
+    }
+  }
+}
