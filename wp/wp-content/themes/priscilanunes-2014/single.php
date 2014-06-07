@@ -1,67 +1,54 @@
 <?php get_header(); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+	<section class="block_wpr block_main">
+		<main role="main">
+			<div class="block_cntt">
+				<div class="content">
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<span class="title_line"></span>
+						<span class="post_info">
+							Categoria&nbsp;&nbsp;::&nbsp;&nbsp;
+							<?php the_category(); ?>&nbsp;&nbsp;
+							-&nbsp;&nbsp; 
+							Postado em&nbsp;&nbsp;::&nbsp;&nbsp;
+							<strong><?php the_time('d/m/Y')?></strong>
+						</span>
+						<span class="post_info_line line"></span>
+						<h2 class="post_title"><?php the_title(); ?></h2>
+					
+						<!-- article -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+							<?php the_content(); ?>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+							<br class="clear">
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
 
-			<?php the_content(); // Dynamic Content ?>
+						</article>
+						<!-- /article -->
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<?php endwhile; ?>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+					<?php else: ?>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+						<!-- article -->
+						<article>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+							<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			<?php comments_template(); ?>
+						</article>
+						<!-- /article -->
 
-		</article>
-		<!-- /article -->
+					<?php endif; ?>
 
-	<?php endwhile; ?>
-
-	<?php else: ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
+				</div>
+				<?php get_sidebar(); ?>
+				<span class="clear"></span>
+			</div>
+		</main>
 	</section>
-	<!-- /section -->
-	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

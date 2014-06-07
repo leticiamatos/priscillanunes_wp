@@ -373,6 +373,13 @@ div.content{
     text-transform: uppercase;
     font-family: @fontTitle;
   }
+  .post_title{
+    color: #D1A520;
+    padding: 20px 0;
+    line-height: 30px !important;
+    font-size: 28px;
+    font-weight: 600;
+  }
 }
 
 // Sidebar
@@ -522,7 +529,41 @@ body.contato{
       color: #fff;
       padding: 10px 15px;
       font-family: @fontTitle;
+      cursor: pointer;
+      .transition;
     }
+    .btn_submit:hover{
+      background: @cK;
+    }
+  }
+}
+
+
+// single / POst
+body.single{
+  
+  .post_info{
+    line-height: 45px;
+    height: 45px;
+    display: block;
+    color: @cK;
+    font-family: @fontTitle;
+    font-size: 14px;
+    a{
+      color: @cK;
+    }
+    .post-categories{
+      display: inline;
+      font-weight: bold;
+      text-transform: uppercase;
+      li{display: inline;}
+    }
+  }
+  .post_info_line{
+    background: @cGray2;
+    height: 5px;
+    display: block;
+    clear: both;
   }
 }
 
