@@ -1,45 +1,44 @@
 <?php get_header(); ?>
+	<section class="block_wpr block_main">
+		<main role="main">
+			<div class="block_cntt">
+				<div class="content">
 
-	<main role="main">
-		<!-- section -->
-		<section>
+					<span class="title_line"></span>
+					<h2 class="page_title"><?php the_title(); ?></h2>
 
-			<h1><?php the_title(); ?></h1>
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+						<!-- article -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<?php the_content(); ?>
 
-				<?php the_content(); ?>
+							<br class="clear">
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-				<br class="clear">
+						</article>
+						<!-- /article -->
 
-				<?php edit_post_link(); ?>
+					<?php endwhile; ?>
 
-			</article>
-			<!-- /article -->
+					<?php else: ?>
 
-		<?php endwhile; ?>
+						<!-- article -->
+						<article>
 
-		<?php else: ?>
+							<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			<!-- article -->
-			<article>
+						</article>
+						<!-- /article -->
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+					<?php endif; ?>
 
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+				</div>
+				<?php get_sidebar(); ?>
+				<span class="clear"></span>
+			</div>
+		</main>
+	</section>
 
 <?php get_footer(); ?>

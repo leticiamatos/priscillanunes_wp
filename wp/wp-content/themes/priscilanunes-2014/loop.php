@@ -10,7 +10,7 @@
 					<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
 				</a>
 			<?php endif; ?>
-			<span class="cat"><a href="#">Nome da Categoria</a></span>
+			<span class="cat"> <?php the_category(); ?></span>
 		</div>
 		<div class="col_02">
 			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>

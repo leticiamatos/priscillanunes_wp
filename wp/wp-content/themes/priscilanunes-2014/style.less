@@ -266,15 +266,21 @@ header{
 
 // home
 body.home{
-  //background: url(img/z_lixo/01_home.jpg) top center;
+  aside{
+    #text-2,
+    #text-4,
+    #text-5{
+      display: block;
+    }
 
-  .block_main .block_cntt{
-    padding-top: 35px;
   }
 }
 .block_main{
   background: url(img/body_bg.gif);
   padding-bottom: 40px;
+  .block_cntt{
+    padding-top: 35px;
+  }
 }
 .post_list{
   .post{
@@ -408,6 +414,7 @@ aside.sidebar{
   #text-4,
   #text-5{
     margin-top: 30px;
+    display: none;
   }
 
   // facebook
@@ -426,6 +433,43 @@ aside.sidebar{
     li{
       width: 32% !important;
     }
+  }
+}
+.content{
+  p{
+    padding-bottom: 10px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: 200;
+  }
+}
+
+// Sobre / About
+body.page-id-2,
+body.sobre{
+  .page_title{
+    display: none;
+  }
+  blockquote{
+    color: #D1A520;
+    font-family: 'Electrolize',sans-serif;
+    padding: 20px 0;
+    text-transform: uppercase;
+    p{
+      line-height: 30px !important;
+      padding-bottom: 10px;
+      font-size: 26px;
+      font-weight: 400;
+    }
+    strong{
+      font-size: 16px;
+      color: @cGray;
+      text-transform: none;
+    }
+  }
+  .about_img{
+    float: left;
+    padding: 0 20px 20px;
   }
 }
 

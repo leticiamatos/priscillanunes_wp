@@ -1,19 +1,21 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+	<section class="block_wpr block_main">
+		<main role="main">
+			<div class="block_cntt">
+				<div class="content">
 
-			<h1><?php _e( 'Categories for ', 'html5blank' ); single_cat_title(); ?></h1>
+					<span class="title_line"></span>
+					<h2 class="page_title"><?php single_cat_title(); ?></h2>
 
-			<?php get_template_part('loop'); ?>
+					<?php get_template_part('loop'); ?>
 
-			<?php get_template_part('pagination'); ?>
+					<?php get_template_part('pagination'); ?>
 
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+			</div>
+			<?php get_sidebar(); ?>
+			<span class="clear"></span>
+		</main>
+	</section>
 
 <?php get_footer(); ?>
