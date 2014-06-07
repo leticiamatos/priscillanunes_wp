@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+	<!-- BEGIN slideshow -->
 	<section class="block_wpr block_slideshow">
 		<div class="block_cntt">
 			<ul class="bxslider-banner">
@@ -33,6 +35,8 @@
 			</div>
 		</div>
 	</section>
+	<!-- END slideshow -->
+
 
 	<section class="block_wpr block_main">
 		<main role="main">
