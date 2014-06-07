@@ -42,3 +42,23 @@
 	</section>
 
 <?php get_footer(); ?>
+
+<!-- Form Contato
+
+<div class="form_name form_item">
+	<label for="name">Nome</label>
+	[text* name id:name class:txt]
+</div>
+<div class="form_name form_item">
+	<label for="mail">E-mail</label>
+	[text* email id:email class:txt]
+</div>
+<div class="form_name form_item">
+	<label for="msg">Nome</label>
+	[textarea* msg id:msg class:txt]
+</div>
+<div class="form_buttons">
+	[submit id:submit class:btn_submit "Enviar"]
+</div>
+
+-->

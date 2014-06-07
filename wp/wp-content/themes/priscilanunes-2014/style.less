@@ -473,6 +473,59 @@ body.sobre{
   }
 }
 
+// Contato
+body.contato{
+  .wpcf7-form{
+    padding-top: 20px;
+  }
+  label{
+    display: block;
+    float: left;
+    font-family: @fontTitle;
+    width: 120px;
+    color: @cY;
+    line-height: 37px;
+    height: 43px;
+  }
+  .wpcf7-form-control-wrap{
+    display: block;
+    float: left;  
+    width: 400px;  
+  }
+  .txt{
+    padding: 10px;
+    font-family: @fontRegular;
+    background-color: #ccc;
+    color: @cK;
+    border: none;
+    font-size: 14px;
+    font-weight: 200;
+    width: 321px;
+    .transition;
+  }
+  .txt:focus,
+  .txt:hover{
+    background-color: @cGray2;
+  }
+  .form_item{
+    clear: both;
+  }
+  .form_buttons{
+    clear: both;
+    padding-top: 20px;
+    padding-left: 375px;
+    .btn_submit{
+      text-transform: uppercase;
+      font-size: 14px;
+      border: none;
+      background: @cY;
+      color: #fff;
+      padding: 10px 15px;
+      font-family: @fontTitle;
+    }
+  }
+}
+
 // footer
 .footer{
   background: @cK;
