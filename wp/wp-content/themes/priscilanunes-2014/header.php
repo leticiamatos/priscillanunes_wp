@@ -50,14 +50,15 @@
 		<section class="general">
 			<section class="block_wpr header">
 				<header class="block_cntt">
-					<h1><a href="<?php bloginfo( 'url'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-priscillanunes.gif" title="Priscilla Nunes - Blog" /></a></h1>
+					<h1><a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-priscillanunes.gif" title="Priscilla Nunes - Blog" /></a></h1>
 					<nav class="menu_social">
 						<a href="#" target="_blank" class="face"></a>
 						<a href="#" target="_blank" class="inst"></a>
 						<a href="#" target="_blank" class="twit"></a>
 					</nav>
-					<nav class="menu  nav" role="navigation">
-						<?php html5blank_nav(); ?>
+					<nav class="nav" role="navigation">
+						<?php //html5blank_nav(); ?>
+						<?php wp_nav_menu(); ?>
 					</nav>						
 				</header>
 				<div class="header_bottom"></div>

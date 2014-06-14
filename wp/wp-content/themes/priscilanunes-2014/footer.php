@@ -1,7 +1,8 @@
 		<section class="footer block_wpr">
 			<footer class="block_cntt" role="contentinfo">
 				<nav class="menu_footer" role="navigation">
-					<?php html5blank_nav(); ?>
+					<?php //html5blank_nav(); ?>
+					<?php wp_nav_menu(array('depth' => 1 )); ?>
 				</nav>											
 				<nav class="menu_social">
 					<a href="#" target="_blank" class="face"></a>

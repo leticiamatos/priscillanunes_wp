@@ -167,6 +167,7 @@ header{
     li{
       display: block;
       float: left;
+      position: relative;
     }
     a{
       text-transform: uppercase;
@@ -175,8 +176,8 @@ header{
       letter-spacing: -1px;
       display: block;
       font-family: @fontTitle;
-      padding: 18px 0 14px;
-      width: 150px;
+      padding: 18px 15px 14px;
+      //width: 150px;
       text-align: center;
       border-top:5px solid #fff;
       border-bottom:5px solid #fff;
@@ -189,10 +190,61 @@ header{
       border-bottom:5px solid @cY;      
     }
     a:hover{
-      color: @cGray;
-      border-top:5px solid @cGray;
-      border-bottom:5px solid @cGray;      
+    //a{
+      opacity: 1; 
+      color: #fff;
+      background: @cY;
+      border-top:5px solid #fff;
+      border-bottom:5px solid #fff;      
     }
+
+    //Submenu
+    li ul {
+      position: absolute;
+      left: 0;
+      top: 66px;
+      z-index: 11;
+      display: none;
+    }
+    li:hover ul, li.over ul { 
+      display: block; 
+    }
+    li ul a{
+      text-transform: none;
+      width: 200px;
+      text-align: left;
+      border-top:none;
+      border-bottom:none;
+      margin-left: none;
+      color: #fff;
+      background: @cY;
+    }
+    li ul li.current-menu-item a{
+      color: #fff;
+      border-top:none;
+      border-bottom:none;      
+    }
+    //a:hover{
+    li ul a:hover{
+      color: #fff;
+      background: @cK;
+      border-top:none;
+      border-bottom:none;
+      opacity: 1;      
+    }
+
+  }
+}
+.pagination{
+  .current,
+  a{
+    padding: 8px 15px;
+    color: #fff;
+    background: @cY;
+    margin: 3px 5px 0 0;
+  }
+  .current{
+    background: @cK;
   }
 }
 .block_wpr.header{
