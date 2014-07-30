@@ -15,7 +15,7 @@
 		<section class="copyright block_wpr">
 			<div class="block_cntt">
 				<p class="copy">&copy; <?php echo date('Y'); ?> - Todos os direitos reservados - Priscilla Nunes</p>
-				<a href="#" target="_blank" class="gustavo_link">Gustavo Lins</a>
+				<a href="http://www.gugalins.com" target="_blank" class="gustavo_link">Gustavo Lins</a>
 			</div>
 		</section>
 

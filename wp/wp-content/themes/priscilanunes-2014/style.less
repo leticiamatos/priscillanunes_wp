@@ -487,13 +487,15 @@ aside.sidebar{
   }
 
   // instagram
-  #null-instagram-feed-2,
-  .jr-insta-slider{
+  #si_feed_widget-2{
     background: #fff url(img/aside-ista-title.gif) top center no-repeat;
     margin-top: 30px;
     border: 5px solid @cK;
     padding: 77px 15px 20px;
     position: relative;
+    float: left;
+    clear: both;
+    width: 260px;
 
     li{
       width: 32% !important;
@@ -502,27 +504,17 @@ aside.sidebar{
       margin-right: 5px;
       margin-bottom: 5px;
       margin-left:0;
+      display: block;
 
-      a,img{
+      a{
+        width: 84px !important;
+        height: 84px !important;
+        margin: 0 !important;
         display: block;
-        width: 100%;
       }
     }
     li:nth-child(3n+3){
       margin-right: 0;
-    }
-    .clear{
-      a{
-        position: absolute;
-        top: 12px;
-        left: 15px;
-        font-size: 14px;
-        display: block;
-        height: 40px;
-        width: 260px;
-        text-indent: 45px;
-        color: #000;
-      }
     }
   }
 }
